@@ -41,7 +41,6 @@
  *  # portfolio
  *    ## portfolio list
  *  # testimonials
- *  # CTA
  *  # footer
  *    ## contact block
  *    ## copyright
@@ -3200,55 +3199,6 @@ html.no-csstransitions .hero-content {
   }
 
 }
-
-
-
-/* ===================================================================
- * # CTA
- *
- * ------------------------------------------------------------------- */
-.s-cta {
-  padding-top: 12rem;
-  background-color: #ffffff;
-  font-size: 2.2rem;
-  line-height: 1.818;
-  text-align: center;
-}
-
-.s-cta h2 {
-  margin-top: 0;
-}
-
-.cta-content {
-  max-width: 800px;
-}
-
-.cta-content .btn {
-  max-width: 600px;
-}
-
-/* ------------------------------------------------------------------- 
- * responsive:
- * cta
- * ------------------------------------------------------------------- */
-@media screen and (max-width:800px) {
-  .s-cta {
-    font-size: 2rem;
-  }
-
-  .cta-content {
-    max-width: 600px;
-  }
-
-}
-
-@media screen and (max-width:600px) {
-  .s-cta {
-    font-size: 1.8rem;
-  }
-
-}
-
 
 
 /* ===================================================================
