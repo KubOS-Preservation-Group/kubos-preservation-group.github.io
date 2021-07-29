@@ -2,3 +2,9 @@
 social:
   discord: https://kubos-preservation-group.github.io/DiscordRedirect/
   github: https://github.com/KubOS-Preservation-Group/
+
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - 
