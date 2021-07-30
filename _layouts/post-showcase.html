@@ -1,0 +1,40 @@
+---
+layout: showcase
+---
+{% for post in site.posts %}
+<article class="brick entry" data-aos="fade-up">
+
+	<div class="entry__thumb">
+		<a href="{{ post.url }}" class="thumb-link">
+			<img src="{{post.image.url}}" alt="{{post.image.alt}}">
+		</a>
+	</div> <!-- end entry__thumb -->
+
+	<div class="entry__text">
+		<div class="entry__header">
+			<h1 class="entry__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+
+			<div class="entry__meta">
+				{% assign author = site.authors[post.author-key] %}
+				<span class="byline">By:
+					<span class='author'>
+						{% include author.html author=author %}
+					</span>
+				</span>
+				<span class="cat-links">
+					{% for category in post.categories %}
+					<a href="/categories/{{category}}">{{ category }}</a>
+					{% endfor %}
+				</span>
+			</div>
+		</div>
+		<div class="entry__excerpt">
+			<p>
+				{{ post.excerpt }}
+			</p>
+		</div>
+		<a class="entry__more-link" href="{{ post.url }}">Read More</a>
+	</div> <!-- end entry__text -->
+
+</article> <!-- end article -->
+{% endfor %}
