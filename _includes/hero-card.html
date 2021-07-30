@@ -17,11 +17,7 @@
 				<span class="byline">
 					Posted by
 					<span class="author">
-						{% if include.author %}
-						<a href="{{ include.authorurl }}">{{ include.authorname }}</a>
-						{% else %}
-						{{ include.authorname }}
-						{% endif %}
+						{% include author.html author=include.author%}
 					</span>
 				</span>
 			</div>
