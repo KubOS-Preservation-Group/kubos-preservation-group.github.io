@@ -1,5 +1,5 @@
 {% if include.author %}
-<a href="{{ include.authorurl }}">{{ include.authorname }}</a>
+<a href="{{ include.author.url }}">{{ include.author.name }}</a>
 {% else %}
-{{ include.authorname }}
+{{ include.author.name }}
 {% endif %}
