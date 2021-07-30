@@ -4,6 +4,8 @@ social:
   github: https://github.com/KubOS-Preservation-Group/
 
 
+permalink: /blog/:title
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
