@@ -1,0 +1,40 @@
+<div class="s-hero__slide">
+
+	<div class="s-hero__slide-bg" style="background-image: url('{{ include.backgroundurl }}');"></div>
+
+	<div class="row s-hero__slide-content animate-this">
+		<div class="column">
+			<div class="s-hero__slide-meta">
+				{% if include.cat-links %}
+				<span class="cat-links">
+					{% for link in cat-links %}
+					<a href="{{link.url}}">{{link.name}}</a>
+					{% endfor %}
+				</span>
+				{% endif %}
+				{% if include.author %}
+
+				<span class="byline">
+					Posted by
+					<span class="author">
+						{% if include.author %}
+						<a href="{{ include.authorurl }}">{{ include.authorname }}</a>
+						{% else %}
+						{{ include.authorname }}
+						{% endif %}
+					</span>
+				</span>
+			</div>
+			{% endif %}
+
+			<h1 class="s-hero__slide-text">
+				{% if include.link %}
+				<a href="{{ include.link }}">{{ include.title }}</a>
+				{% else %}
+				{{ include.title }}
+				{% endif %}
+			</h1>
+		</div>
+	</div>
+
+</div> <!-- end s-hero__slide -->
