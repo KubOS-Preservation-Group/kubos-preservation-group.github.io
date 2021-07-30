@@ -6,6 +6,13 @@ social:
 
 permalink: /blog/:title
 
+authors:
+  adrian:
+    name: Adrian Edwards
+    url: https://www.adriancedwards.com
+    avatar: /images/avatars/user-06.jpg
+
+    
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
