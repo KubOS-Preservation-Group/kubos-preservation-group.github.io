@@ -50,9 +50,11 @@ layout: single
                         <div class="entry-cat-links meta-blk">
                             <div class="cat-links">
                                 <span>In</span> 
-                                <a href="#0">Frontend</a>
-                                <a href="#0">Design</a>
-                                <a href="#0">Work</a>
+                                <span class="cat-links">
+                                    {% for category in page.categories %}
+                                    <a href="/categories/{{category}}">{{ category }}</a>
+                                    {% endfor %}
+                                </span>
                             </div>
 
                             <span>On</span>
@@ -62,10 +64,9 @@ layout: single
 
                         <div class="entry-tags meta-blk">
                             <span class="tagtext">Tags</span>
-                            <a href="#">orci</a>
-                            <a href="#">lectus</a>
-                            <a href="#">varius</a>
-                            <a href="#">turpis</a>
+                                {% for tag in page.tags %}
+                                <a href="/tags/{{tag}}">{{ tag }}</a>
+                                {% endfor %}
                         </div>
 
                     </div>

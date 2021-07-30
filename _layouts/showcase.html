@@ -50,9 +50,10 @@ layout: single
 									{% include author.html author=author %}
 								</span>
 							</span>
-							<span class=" cat-links">
-								<a href="#">Health</a>
-								<a href="#">Vacation</a>
+							<span class="cat-links">
+								{% for category in post.categories %}
+								<a href="/categories/{{category}}">{{ category }}</a>
+								{% endfor %}
 							</span>
 						</div>
 					</div>
