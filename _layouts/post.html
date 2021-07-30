@@ -32,7 +32,7 @@ layout: single
                 <div class="s-content__entry-meta">
 
                     <div class="entry-author meta-blk">
-                        {% assign author = site.authors[page.author] %}
+                        {% assign author = site.authors[page.author-key] %}
                         {% if author.avatar %}
                         <div class="author-avatar">
                             <img class="avatar" src="{{ author.avatar }}" alt="">

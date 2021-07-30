@@ -44,7 +44,7 @@ layout: single
 						<h1 class="entry__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
 			
 						<div class="entry__meta">
-							{% assign author = site.authors[post.author] %}
+							{% assign author = site.authors[post.author-key] %}
 							<span class="byline"">By:
 								<span class='author'>
 									{% include author.html author=author %}
