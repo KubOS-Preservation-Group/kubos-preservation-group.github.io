@@ -1,0 +1,96 @@
+---
+layout: single
+---
+<!-- content
+================================================== -->
+<div class="row">
+    <div class="column large-12">
+
+        <article class="s-content__entry format-standard">
+            {% if page.image %}
+            <div class="s-content__media">
+                <div class="s-content__post-thumb">
+                    <!-- https://github.com/netlify/jekyll-srcset -->
+                    <!-- <img src="images/thumbs/single/single-post-1050.jpg" 
+                            srcset="images/thumbs/single/single-post-2100.jpg 2100w, 
+                                    images/thumbs/single/single-post-1050.jpg 1050w, 
+                                    images/thumbs/single/single-post-525.jpg 525w" sizes="(max-width: 2100px) 100vw, 2100px" alt=""> -->
+                        <img src="{{page.image.url}}" alt="{{page.image.alt}}"> 
+                </div>
+            </div> <!-- end s-content__media -->
+            {% endif %}
+
+            <div class="s-content__entry-header">
+                <h1 class="s-content__title s-content__title--post">{{ page.title }}</h1>
+            </div> <!-- end s-content__entry-header -->
+
+            <div class="s-content__primary">
+                <div class="s-content__entry-content">
+                    {{ content }}
+                </div> <!-- end s-entry__entry-content -->
+
+                <div class="s-content__entry-meta">
+
+                    <div class="entry-author meta-blk">
+                        {% assign author = site.authors[page.author-key] %}
+                        {% if author.avatar %}
+                        <div class="author-avatar">
+                            <img class="avatar" src="{{ author.avatar }}" alt="">
+                        </div>
+                        {% endif %}
+                        <div class="byline">
+                            <span class="bytext">Posted By</span>
+                            {% include author.html author=author %}
+
+                        </div>
+                    </div>
+
+                    <div class="meta-bottom">
+                        
+                        <div class="entry-cat-links meta-blk">
+                            <div class="cat-links">
+                                <span>In</span> 
+                                <span class="cat-links">
+                                    {% for category in page.categories %}
+                                    <a href="/categories/{{category}}">{{ category }}</a>
+                                    {% endfor %}
+                                </span>
+                            </div>
+
+                            <span>On</span>
+                            <time datetime="{{ page.date }}">{{ page.date | date_to_string }}</time>
+                            
+                        </div>
+
+                        <div class="entry-tags meta-blk">
+                            <span class="tagtext">Tags</span>
+                                {% for tag in page.tags %}
+                                <a href="/tags/{{tag}}">{{ tag }}</a>
+                                {% endfor %}
+                        </div>
+
+                    </div>
+
+                </div> <!-- s-content__entry-meta -->
+
+                <div class="s-content__pagenav">
+                    <div class="prev-nav">
+                        <a href="#" rel="prev">
+                            <span>Previous</span>
+                            Tips on Minimalist Design 
+                        </a>
+                    </div>
+                    <div class="next-nav">
+                        <a href="#" rel="next">
+                            <span>Next</span>
+                            A Practical Guide to a Minimalist Lifestyle.
+                        </a>
+                    </div>
+                    </div> <!-- end s-content__pagenav -->
+
+            </div> <!-- end s-content__primary -->
+        </article> <!-- end entry -->
+
+    </div> <!-- end column -->
+</div> <!-- end row -->
+
