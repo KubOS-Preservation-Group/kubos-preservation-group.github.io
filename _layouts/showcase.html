@@ -7,7 +7,9 @@ layout: single
 	<div class="row">
 		<div class="column large-12">
 			<h1 class="page-title">
+				{% if page.showcase-type %}
 				<span class="page-title__small-type">{{page.showcase-type | capitalize}}</span>
+				{% endif %}
 				{{page.showcase-list.name | capitalize}}
 			</h1>
 		</div>
