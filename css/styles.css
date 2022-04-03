@@ -1603,9 +1603,10 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-    color: var(--color-1);
+    color: var(--color-1-light);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    text-decoration: underline;
 }
 
 a:hover, a:focus, a:active {
@@ -3539,6 +3540,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     color: white;
     line-height: var(--header-height);
     position: relative;
+    text-decoration: none;
 }
 
 .s-header__nav li.has-children>a::after {
